@@ -1,9 +1,11 @@
+import { SlowBuffer } from "buffer";
+
 interface AppHeaderProps {
   title: string;
 }
 
 function AppHeader({ title }: AppHeaderProps): JSX.Element {
-  return <h1>{title}</h1>;
+  return <h1 onClick={() => console.log(title.toUpperCase())}>{title}</h1>;
 }
 
 export default AppHeader;
